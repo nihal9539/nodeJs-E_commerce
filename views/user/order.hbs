@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row mt-3">
+            {{!-- <a href="/admin/add-product" class="btn btn-success ml-auto">add product</a> --}}
+        </div>
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">date</th>
+                    <th scope="col">address</th>
+                    <th scope="col">pincode</th>
+                    <th scope="col">totalAmount</th>
+                    <th scope="col">paymentmethod</th>
+                    <th scope="col">status</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {{#each orders}}
+                <tr>
+                    {{!-- <th scope="row">1</th> --}}
+                    <td>{{this.date}}</td>
+                    <td>{{this.deliveryDetails.address}}</td>
+                    <td>{{this.deliveryDetails.pincode}}</td>
+                    <td>{{this.totalAmount}}</td>
+                    <td>{{this.paymentMethod}}</td>
+                    <td>{{this.status}}</td>
+                    {{!-- <td><a href="/view-order-product/{{this._id}}" class="btn btn-primary">view products</a></td> --}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
